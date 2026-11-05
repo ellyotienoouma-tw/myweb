@@ -1,0 +1,114 @@
+.setup-screen {
+  min-height: 100vh;
+  padding: 34px max(22px, 7.1%);
+  background:
+    radial-gradient(ellipse at 82% 48%, rgba(119,140,66,.11), transparent 37%),
+    #11120f;
+}
+
+.setup-card {
+  width: min(100%, 560px);
+  margin: clamp(70px, 14vh, 145px) auto;
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: rgba(24,24,24,.82);
+}
+
+.setup-card h1 {
+  margin: 0 0 18px;
+  font: 600 clamp(34px, 6vw, 55px)/1.05 var(--font-display);
+  letter-spacing: -.06em;
+}
+
+.setup-card h1 span { color: var(--accent); }
+.setup-card > p:not(.eyebrow) { color: #b6b5ad; font-size: 13px; line-height: 1.7; }
+.setup-card ol { padding-left: 21px; color: #c4c3bb; font-size: 12px; line-height: 1.8; }
+.setup-card li { padding-left: 4px; margin-bottom: 8px; }
+.setup-card code { color: var(--accent); overflow-wrap: anywhere; }
+.setup-card .setup-note { padding-top: 13px; border-top: 1px solid var(--line); color: #85857d !important; font-size: 11px !important; }
+.signed-in-email { margin: 0 auto; color: var(--muted); font-size: 12px; }
+.catalog-title { font: 600 32px var(--font-display); letter-spacing: -.04em; }
+.catalog-title span { color: #787871; font: 400 14px var(--font-body); vertical-align: 3px; }
+.movie-grid.production-grid { margin-top: 30px; }
+.production-toolbar { flex-wrap: wrap; }
+.production-toolbar .search-box { flex: 0 1 270px; }
+.production-toolbar .filter-row { min-width: 100px; }
+.production-card .poster { aspect-ratio: 2 / 2.75; }
+.production-card .poster.has-image { background-position: center; background-size: cover; }
+.catalog-empty { grid-column: 1 / -1; padding: 52px 15px; color: var(--muted); font-size: 13px; text-align: center; }
+.api-error { padding: 22px; border: 1px solid #703c36; border-radius: 6px; color: #ff988c; font-size: 13px; }
+.player-dialog video { display: block; width: 100%; max-height: 68vh; background: #050505; }
+.movie-description { margin-top: 9px; color: #88877f; font-size: 11px; line-height: 1.55; }
+.movie-card-actions { display: flex; gap: 8px; margin-top: 13px; }
+.movie-card-actions .button { min-height: 35px; padding: 0 11px; font-size: 10px; }
+.catalog-message { min-height: 17px; margin: 10px 0 0; color: #ff988c; font-size: 11px; }
+.auth-form, .signup-form { margin-top: 21px; }
+.auth-form .field { margin-bottom: 14px; }
+.auth-submit { width: 100%; }
+.signup-form {
+  display: grid;
+  gap: 10px;
+  padding-top: 19px;
+  border-top: 1px solid var(--line);
+}
+.signup-form input {
+  width: 100%;
+  height: 40px;
+  padding: 10px 11px;
+  border: 1px solid #363632;
+  border-radius: 5px;
+  background: #10100f;
+  color: var(--text);
+  font-size: 12px;
+}
+.signup-form input::placeholder { color: #77776f; }
+.auth-success { color: var(--accent); font-size: 11px; }
+.admin-layout {
+  width: min(1120px, 85.8%);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+  gap: 48px;
+  margin: 72px auto 100px;
+}
+.admin-title { margin: 0 0 12px; font: 600 clamp(29px, 4vw, 42px)/1.1 var(--font-display); letter-spacing: -.05em; }
+.admin-intro { color: #aaa99f; font-size: 12px; line-height: 1.65; }
+.admin-upload-form { margin-top: 25px; padding: 23px; border: 1px solid var(--line); border-radius: 7px; background: #171715; }
+.admin-upload-form .field { margin-bottom: 15px; }
+.admin-upload-form input[type="file"] { padding: 7px; }
+.license-confirmation { display: flex; gap: 10px; align-items: start; color: #b7b6ac; font-size: 11px; line-height: 1.5; }
+.license-confirmation input { margin-top: 2px; accent-color: var(--accent); }
+.admin-upload-status { min-height: 16px; margin: 12px 0; color: var(--accent); font-size: 11px; }
+.admin-movies { padding: 23px; border: 1px solid var(--line); border-radius: 7px; background: #171715; align-self: start; }
+.admin-movies h2 { margin: 0 0 18px; font-size: 20px; }
+.admin-access { grid-column: 1 / -1; }
+.admin-access h2 { margin: 0 0 10px; font-size: 22px; }
+.admin-access .admin-upload-form { width: min(100%, 520px); margin-top: 16px; }
+.admin-upload-form select {
+  width: 100%;
+  height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #363632;
+  border-radius: 5px;
+  background: #10100f;
+  color: var(--text);
+  font-size: 12px;
+}
+.access-action { margin-top: 14px; }
+.admin-movies ul { margin: 0; padding: 0; list-style: none; }
+.admin-movies li { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 12px; }
+.upload-status { color: var(--muted); font-size: 10px; text-transform: capitalize; }
+.status-ready { color: var(--accent); }
+.status-errored { color: #ff988c; }
+@media (max-width: 600px) {
+  .setup-card { margin-top: 80px; padding: 24px 20px; }
+  .signed-in-email { max-width: 40%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .topbar form .button { min-height: 35px; padding: 0 10px; font-size: 10px; }
+  .catalog-title { font-size: 27px; }
+  .production-toolbar { gap: 9px; }
+  .production-toolbar .search-box { flex-basis: 100%; }
+  .production-toolbar .sort-control { display: block; }
+  .production-toolbar .filter-row { order: 0; flex-basis: 100%; }
+  .admin-layout { width: auto; grid-template-columns: 1fr; gap: 28px; margin: 42px 20px 70px; }
+  .admin-upload-form, .admin-movies { padding: 18px; }
+}
